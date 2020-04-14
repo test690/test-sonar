@@ -26,6 +26,11 @@ jobs:
         -Dsonar.organization=amrsamii
         -Dsonar.projectKey=amrsamii_test-sonar
         -Dsonar.scm.disabled=True
+        -Dsonar.pullrequest.base=master
+        -Dsonar.pullrequest.branch=test
+        -Dsonar.pullrequest.key=1
+        -Dsonar.pullrequest.provider=GitHub
+        -Dsonar.pullrequest.repository=amrsamii/test-sonar
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
