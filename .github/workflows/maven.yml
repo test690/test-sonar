@@ -26,7 +26,6 @@ jobs:
         -Dsonar.organization=test690
         -Dsonar.projectKey=test690_test-sonar
         -Dsonar.scm.disabled=True
-        -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
