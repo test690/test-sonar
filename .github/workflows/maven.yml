@@ -1,7 +1,10 @@
-name: test-sonar branches CI
+name: test-sonar CI
 
 on:
   push:
+    branches: [ master ]
+  pull_requests:
+    branches: [ master ]
 
 jobs:
   build:
