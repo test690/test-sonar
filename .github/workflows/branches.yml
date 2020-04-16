@@ -1,10 +1,7 @@
-name: test-sonar CI
+name: test-sonar branches CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -17,14 +14,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: Build with Maven and run SonarCloud
       run: >
-        ./mvnw clean verify
+        ./mvnw -B
+        clean verify
         sonar:sonar
         -Pcoverage
         -Dsonar.host.url=https://sonarcloud.io
-        -Dsonar.organization=test690
-        -Dsonar.projectKey=test690_test-sonar
+        -Dsonar.organization=amrsamii
+        -Dsonar.projectKey=amrsamii_test-sonar
         -Dsonar.scm.disabled=True
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
