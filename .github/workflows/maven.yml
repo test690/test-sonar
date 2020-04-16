@@ -24,8 +24,8 @@ jobs:
         sonar:sonar
         -Pcoverage
         -Dsonar.host.url=https://sonarcloud.io
-        -Dsonar.organization=amrsamii
-        -Dsonar.projectKey=amrsamii_test-sonar
+        -Dsonar.organization=test690
+        -Dsonar.projectKey=test690_test-sonar
         -Dsonar.scm.disabled=True
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
