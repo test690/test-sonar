@@ -9,3 +9,5 @@ fun mul(x:Int, y:Int) = x*y
 fun div(x:Int, y:Int) = x/y
 
 fun mod(x:Int, y:Int) = x%    y
+
+fun tes() = 5
